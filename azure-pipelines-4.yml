@@ -23,9 +23,9 @@ stages:
   - job: Build
     displayName: Build
     pool:
-      name: dockerdotnet
+      name: dockerdotnet1
       demands:
-       - agent.name -equals dockerdotnet
+       - agent.name -equals dockerdotnet1
     steps:
     - task: Docker@2
       displayName: Build and push an image to container registry
