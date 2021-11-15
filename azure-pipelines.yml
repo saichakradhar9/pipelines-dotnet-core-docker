@@ -23,9 +23,9 @@ stages:
   - job: Build
     displayName: Build
     pool:
-      name: azuredocker1
+      name: dockertest
       demands:
-      - agent.name -equals azuredocker1
+       - agent.name -equals dockertest
     steps:
     - task: Docker@2
       displayName: Build and push an image to container registry
