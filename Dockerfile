@@ -1,6 +1,8 @@
 # First stage of multi-stage build
 FROM mcr.microsoft.com/dotnet/sdk:6.0 as build-env
 WORKDIR /app
+EXPOSE 80 
+EXPOSE 443
 
 # copy the contents of agent working directory on host to workdir in container
 COPY . ./
