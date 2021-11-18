@@ -10,7 +10,7 @@ resources:
 
 variables:
   # Container registry service connection established during pipeline creation
-  dockerRegistryServiceConnection: '6b4a1385-8bfd-4fe9-b5d3-232e0c06fe7b'
+  dockerRegistryServiceConnection: '50d1fd6c-3b82-44a1-83c2-e6d8159a2ae4'
   imageRepository: 'dsfsandeeppipelinesdotnetcoredocker'
   containerRegistry: 'dsfweb.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
@@ -23,9 +23,9 @@ stages:
   - job: Build
     displayName: Build
     pool:
-      name: dockertest
+      name: dockerdotnet
       demands:
-       - agent.name -equals dockertest
+       - agent.name -equals dockerdotnet
     steps:
     - task: Docker@2
       displayName: Build and push an image to container registry
